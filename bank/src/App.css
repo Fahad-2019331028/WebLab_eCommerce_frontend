@@ -1,0 +1,483 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.login {
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+  -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+}
+.login::before, .login::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 50%;
+  z-index: -1;
+}
+
+.login::before {
+  left: 70%;
+  bottom: -100%;
+  background-color: rgba(69, 105, 144, 0.15);
+  animation: wawes-before 5s infinite linear;
+}
+
+.login::after {
+  left: 75%;
+  bottom: -90%;
+  background-color: rgba(247, 14, 95, 0.2);
+  animation: wawes-after 6s infinite linear;
+}
+@keyframes wawes-before {
+  from {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes wawes-after {
+  from {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+
+
+.login > input {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  margin: 15px -10px;
+}
+.login > input:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.login > button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 80px;
+  border: 0;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: #ba415a !important;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.card {
+  animation: none !important;
+}
+
+@-webkit-keyframes wawes {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes wawes {
+  from {
+    -moz-transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes wawes {
+  from {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+t1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+}
+
+#log {
+  background-color: #ba415a;
+}
+
+.padding {
+  padding: 3rem !important;
+  margin-left: 200px;
+}
+
+.card-img-top {
+  height: 300px;
+}
+
+.card-no-border .card {
+  border-color: #d7dfe3;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.pro-img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+}
+
+.little-profile .pro-img img {
+  width: 128px;
+  height: 128px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+}
+
+html body .m-b-0 {
+  margin-bottom: 0px;
+}
+
+h3 {
+  line-height: 30px;
+  font-size: 21px;
+}
+
+.btn-rounded.btn-md {
+  padding: 12px 35px;
+  font-size: 16px;
+}
+
+html body .m-t-10 {
+  margin-top: 10px;
+}
+#meo {
+  width: 132px;
+  height: 132px;
+}
+.btn-primary,
+.btn-primary.disabled {
+  background: #7460ee;
+  border: 1px solid #7460ee;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14),
+    0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14),
+    0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.btn-rounded {
+  border-radius: 60px;
+  padding: 7px 18px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.wow {
+  margin-left: -80px;
+  margin-top: 20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap");
+textt {
+  font-family: "Poppins", sans-serif;
+}
+
+#ref {
+  margin-top: 40px !important;
+  margin-bottom: -90px !important;
+  width: 120px !important;
+  height: 40px;
+}
+
+#blog {
+  margin-top: 80px !important;
+  margin-bottom: -90px !important;
+  width: 120px !important;
+  height: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-container button {
+  margin-right: 10px; /* Add a gap between buttons */
+}
+.bank-details-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  width: 30vh;
+  margin-left: 45%;
+  margin-top: 50px;
+}
+
+/* Styling for the white container */
+.bank-details-container {
+  align-items: center;
+  background-color: rgb(247, 198, 198);
+  padding: 10px; /* Adjust the padding as needed */
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for bank details text */
+.bank-details-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+#blog {
+  margin-top: 20px !important;
+  width: 120px !important;
+  height: 40px;
+  background-color: #ba415a !important;
+}
+.logout {
+  overflow: hidden;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 400px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+  -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+}
+.logout::before, .logout::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 50%;
+  z-index: -1;
+}
+
+.logout::before {
+  left: 70%;
+  bottom: -100%;
+  background-color: rgba(69, 105, 144, 0.15);
+  animation: wawes-before 5s infinite linear;
+}
+
+.logout::after {
+  left: 75%;
+  bottom: -90%;
+  background-color: rgba(247, 14, 95, 0.2);
+  animation: wawes-after 6s infinite linear;
+}
+@keyframes wawes-before {
+  from {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes wawes-after {
+  from {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+
+
+.logout > input {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  margin: 15px -10px;
+}
+.logout > input:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.logout > button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 80px;
+  border: 0;
+  padding: 10px 0;
+  margin-top: 0px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: #ba415a !important;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+@-webkit-keyframes wawes {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes wawes {
+  from {
+    -moz-transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes wawes {
+  from {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

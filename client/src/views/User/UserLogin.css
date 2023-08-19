@@ -1,0 +1,38 @@
+.dots-bars-3 {
+  width: 40px;
+  height: 26px;
+  --c: linear-gradient(90deg, #385898, #788cb5);
+  background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 8px calc(100% - 4px);
+  background-repeat: no-repeat;
+  position: relative;
+}
+.dots-bars-3:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  left: 0;
+  top: 0;
+  animation: db3-1 1.5s linear infinite alternate,
+    db3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.load_hold2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 130px;
+  place-items: center;
+  box-sizing: border-box;
+  position: absolute !important;
+  left: 49.9%;
+  top: 10.6% !important;
+  transform: translate(-50%, -50%);
+  z-index: 1 !important;
+}
+
+.login input:focus {
+  box-shadow: 0 0 5px black !important;
+}
